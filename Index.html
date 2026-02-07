@@ -1,1 +1,120 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Rose Day Esha 🌹</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin:0;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient(135deg,#ffd1dc,#ff4d6d);
+      font-family: cursive;
+      text-align:center;
+      overflow:hidden;
+    }
+
+    h1 {
+      font-size:2.5rem;
+      color:#b3003c;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .rose {
+      font-size:80px;
+      animation: bloom 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes bloom {
+      from { transform: scale(0.8); }
+      to { transform: scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(-20px);}
+      to { opacity:1; transform:translateY(0);}
+    }
+
+    .message {
+      max-width:90%;
+      margin-top:20px;
+      font-size:16px;
+      color:white;
+      background:rgba(255,255,255,0.2);
+      padding:20px;
+      border-radius:20px;
+      backdrop-filter:blur(10px);
+    }
+
+    button {
+      margin-top:15px;
+      padding:10px 20px;
+      border:none;
+      border-radius:20px;
+      background:#ff1a4d;
+      color:white;
+      font-size:16px;
+    }
+
+    .popup {
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.6);
+      display:none;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .popup-content {
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      max-width:80%;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Happy Rose Day 🌹 Esha</h1>
+<div class="rose">🌹</div>
+
+<div class="message">
+My dearest Esha ❤️,<br><br>
+Just like a rose blooms beautifully, my love for you grows stronger every day.
+You are my peace, my happiness, and the most beautiful part of my life.
+When you smile, my whole world feels brighter.
+Today I send you a thousand invisible roses — each carrying a reason why I love you.
+And trust me… those reasons will never end. 🌹✨<br><br>
+Happy Rose Day, my love. Forever yours. ❤️
+</div>
+
+<button onclick="showSurprise()">Click for Surprise 💝</button>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2>Surprise 💖</h2>
+    <p>Esha, will you keep blooming in my life forever? 🌹❤️</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script>
+function showSurprise(){
+  document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
